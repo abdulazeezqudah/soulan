@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="notificationVM" type="com.soulanjo.app.modules.notification.data.viewmodel.NotificationVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearNotification"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/_16pxh"
+        android:paddingStart="@dimen/_16pxh"
+        android:paddingTop="@dimen/_168pxv" style="@style/groupStyle{&quot;name&quot;:&quot;deep_purple_A200&quot;}">
+        <ImageView android:id="@+id/imageNotificationBell"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_161pxh"
+            android:layout_width="@dimen/_146pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_notification_bell}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_notification_bell"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtTurnOnNotifications"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{notificationVM.notificationModel.txtTurnOnNotifications}"
+            style="@style/txtInterbold32_1" tools:text="@string/msg_turn_on_notifications"/>
+        <TextView android:id="@+id/txtTurnOnNotifications1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@{notificationVM.notificationModel.txtTurnOnNotifications1}"
+            style="@style/txtIntermedium16" tools:text="@string/msg_turn_on_notifications2"/>
+        <LinearLayout android:id="@+id/linearNotifications"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNotifications"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{notificationVM.notificationModel.txtNotifications}"
+                style="@style/txtIntermedium16" tools:text="@string/lbl_notifications"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchMaterialOnOffButton"
+                android:layout_gravity="top"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

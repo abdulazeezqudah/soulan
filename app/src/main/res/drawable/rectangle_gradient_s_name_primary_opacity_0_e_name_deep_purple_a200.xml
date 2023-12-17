@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:angle="270.0"
+        android:endColor="@color/{&quot;name&quot;:&quot;deep_purple_A200&quot;}"
+        android:startColor="@color/{&quot;name&quot;:&quot;primary&quot;,&quot;opacity&quot;:0}" android:type="linear"/>
+</shape>

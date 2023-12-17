@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="discoverVM" type="com.soulanjo.app.modules.discover.data.viewmodel.DiscoverVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearLIVE"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;}">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearTwentySix"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerProfiles"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_16pxh}" tools:itemCount="3" tools:listitem="@layout/row_profiles"/>
+            <FrameLayout android:id="@+id/framePost"
+                android:layout_height="@dimen/_401pxv" android:layout_width="@dimen/_382pxh">
+                <View
+                    android:background="@drawable/rectangle_bg_name_deep_purple_a200_radius_15"
+                    android:id="@+id/viewView"
+                    android:layout_gravity="top|center"
+                    android:layout_height="@dimen/_384pxh" android:layout_width="@dimen/_382pxh"/>
+                <LinearLayout android:id="@+id/linearPost"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linearProfileDetails"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageCircleImage"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_50pxh"
+                            android:layout_width="@dimen/_50pxh"
+                            android:scaleType="centerCrop"
+                            circular="@{true}"
+                            imageRes="@{@drawable/img_ellipse_21}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_21"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearRizalReynaldhi"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtRizalReynaldhi"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{discoverVM.discoverModel.txtRizalReynaldhi}"
+                                style="@style/txtIntermedium18" tools:text="@string/lbl_rizal_reynaldhi"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtDuration"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{discoverVM.discoverModel.txtDuration}"
+                                style="@style/txtIntermedium10" tools:text="@string/lbl_35_minutes_ago"/>
+                        </LinearLayout>
+                        <FrameLayout android:id="@+id/frameSpacer"
+                            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                        <ImageView android:id="@+id/imageImage"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_6pxh"
+                            android:layout_width="@dimen/_30pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_group_8916"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_group_8916"/>
+                    </LinearLayout>
+                    <TextView android:id="@+id/txtMeAndMyFriends"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@{discoverVM.discoverModel.txtMeAndMyFriends}"
+                        style="@style/txtInterregular16_2" tools:text="@string/msg_me_and_my_friends"/>
+                    <LinearLayout android:id="@+id/linearBeach"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtBeach"
+                            android:layout_gravity="top"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{discoverVM.discoverModel.txtBeach}"
+                            style="@style/txtInterregular14_1" tools:text="@string/lbl_beach"/>
+                        <FrameLayout android:id="@+id/frameSpacer1"
+                            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtOcean"
+                            android:layout_gravity="top"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{discoverVM.discoverModel.txtOcean}"
+                            style="@style/txtInterregular14_1" tools:text="@string/lbl_ocean"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtHoliday"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{discoverVM.discoverModel.txtHoliday}"
+                            style="@style/txtInterregular14_1" tools:text="@string/lbl_holiday"/>
+                    </LinearLayout>
+                    <ImageView android:id="@+id/imageTwoHundredEleven"
+                        android:layout_height="@dimen/_227pxh"
+                        android:layout_width="@dimen/_334pxh"
+                        android:scaleType="fitXY"
+                        cornerRadius="@{@dimen/_15pxh}"
+                        imageRes="@{@drawable/img_21_1}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_21_1"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

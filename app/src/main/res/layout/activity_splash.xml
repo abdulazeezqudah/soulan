@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="splashVM" type="com.soulanjo.app.modules.splash.data.viewmodel.SplashVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSplash"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;deep_purple_A200&quot;}">
+        <ImageView android:id="@+id/imageSocialMediaOne"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_120pxh"
+            android:layout_width="@dimen/_120pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_social_media_1"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_social_media_1"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtSocial"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{splashVM.splashModel.txtSocial}"
+            style="@style/txtIntermedium36" tools:text="@string/lbl_social"/>
+    </LinearLayout>
+</layout>

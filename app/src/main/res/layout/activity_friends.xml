@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="friendsVM" type="com.soulanjo.app.modules.friends.data.viewmodel.FriendsVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearFollow"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowBack"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_back_deep_purple_a200"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_back_deep_purple_a200"/>
+            <ImageView android:id="@+id/imagePersonAddAltOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_person_add_alt_1"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_person_add_alt_1"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFriends"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFriends"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{friendsVM.friendsModel.txtFriends}"
+                style="@style/txtInterbold32" tools:text="@string/lbl_friends"/>
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_bg_name_gray_50_radius_20"
+                android:gravity="center_horizontal"
+                android:id="@+id/searchViewSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewsearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/lbl_search" app:searchIcon="@drawable/img_search_blue_gray_400"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtConnectToYour"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{friendsVM.friendsModel.txtConnectToYour}"
+                style="@style/txtInterbold20" tools:text="@string/msg_connect_to_your"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTwitter"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_30pxh}" tools:itemCount="4" tools:listitem="@layout/row_twitter"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtRecommeded"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{friendsVM.friendsModel.txtRecommeded}"
+                style="@style/txtInterbold20" tools:text="@string/lbl_recommeded"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerFollow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_5pxh}" tools:itemCount="7" tools:listitem="@layout/row_follow"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

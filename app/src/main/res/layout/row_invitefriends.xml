@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="invitefriendsRowModel" type="com.soulanjo.app.modules.invitefriends.data.model.InvitefriendsRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearKevinAllsrub"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_5pxv"
+        android:paddingEnd="@dimen/_12pxh"
+        android:paddingStart="@dimen/_12pxh" android:paddingTop="@dimen/_5pxv">
+        <ImageView android:id="@+id/imageKevinAllsrub"
+            android:layout_height="@dimen/_50pxh"
+            android:layout_width="@dimen/_50pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_ellipse_5}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_5"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearSixtySix"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtKevinAllsrub"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{invitefriendsRowModel.txtKevinAllsrub}"
+                style="@style/txtIntersemibold20_1" tools:text="@string/lbl_kevin_allsrub"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtYourEFriendsOn"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{invitefriendsRowModel.txtYourEFriendsOn}"
+                style="@style/txtInterregular14_2" tools:text="@string/msg_your_e_friends_on"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <ImageButton
+            android:background="@drawable/rectangle_bg_name_deep_purple_a200_radius_7"
+            android:id="@+id/btnCheckmark"
+            android:layout_height="@dimen/_24pxh"
+            android:layout_width="@dimen/_24pxh"
+            android:paddingHorizontal="@dimen/_6pxh"
+            android:paddingVertical="@dimen/_6pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_checkmark" tools:ignore="ContentDescription"/>
+    </LinearLayout>
+</layout>

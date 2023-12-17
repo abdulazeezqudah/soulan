@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="twitterRowModel" type="com.soulanjo.app.modules.friends.data.model.TwitterRowModel"/>
+    </data>
+    <ImageView android:id="@+id/imageTwitter"
+        android:layout_height="@dimen/_50pxv"
+        android:layout_width="@dimen/_50pxh" android:scaleType="fitXY"
+        android:src="@drawable/img_twitter_blue_500"
+        tools:ignore="ContentDescription" tools:src="@drawable/img_twitter_blue_500"/>
+</layout>

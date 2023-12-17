@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="commentlistRowModel" type="com.soulanjo.app.modules.comments.data.model.CommentlistRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearCommentItem"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearProfileDetail1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageRizalReynaldhi"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_50pxh"
+                android:layout_width="@dimen/_50pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_ellipse_21}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_21"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearProfileDetail2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtRizalReynaldhi"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{commentlistRowModel.txtRizalReynaldhi}"
+                    style="@style/txtIntermedium18_1" tools:text="@string/lbl_rizal_reynaldhi"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDuration"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{commentlistRowModel.txtDuration}"
+                    style="@style/txtIntermedium10_3" tools:text="@string/lbl_35_minutes_ago"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@+id/txtMostPeopleNever"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@{commentlistRowModel.txtMostPeopleNever}"
+            style="@style/txtInterregular16_3" tools:text="@string/msg_most_people_never"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtReply"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{commentlistRowModel.txtReply}"
+            style="@style/txtIntersemibold16" tools:text="@string/lbl_reply"/>
+    </LinearLayout>
+</layout>
