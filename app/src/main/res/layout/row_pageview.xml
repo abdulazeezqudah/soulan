@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="pageviewRowModel" type="com.soulanjo.app.modules.pageview.data.model.PageviewRowModel"/>
+    </data>
+    <View android:background="@drawable/img_ellipse_9_40x40"
+        android:id="@+id/viewEllipse"
+        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+</layout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="stories2RowModel" type="com.soulanjo.app.modules.stories.data.model.Stories2RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearStoryItem"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <FrameLayout android:id="@+id/frameRoy"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_64pxv"
+            android:layout_width="@dimen/_64pxh"
+            android:paddingBottom="@dimen/_3pxv"
+            android:paddingEnd="@dimen/_4pxh"
+            android:paddingStart="@dimen/_4pxh"
+            android:paddingTop="@dimen/_3pxv" style="@style/groupStylecornerRadius">
+            <ImageView android:id="@+id/imageRoy"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_54pxh"
+                android:layout_width="@dimen/_52pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_27pxh}"
+                imageRes="@{@drawable/img_ellipse_15}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_15"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end" android:id="@+id/txtRoy"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{stories2RowModel.txtRoy}"
+            style="@style/txtIntermedium12" tools:text="@string/lbl_roy"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="pageViewVM" type="com.soulanjo.app.modules.pageview.data.viewmodel.PageViewVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frame46"
+        android:layout_height="match_parent" android:layout_width="match_parent">
+        <LinearLayout android:id="@+id/linearPageView"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylenameprimarycornerRadius_1">
+            <androidx.appcompat.widget.Toolbar
+                android:gravity="center_horizontal"
+                android:id="@+id/toolbarAppBar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <ImageView android:id="@+id/imageArrowBack"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrow_back"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_back"/>
+                <LinearLayout android:id="@+id/linearGroup26"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageReply"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_reply"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_reply"/>
+                    <ImageView android:id="@+id/imageImage"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_group_8916"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_group_8916"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearStreamDetails"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/_16pxh" android:paddingStart="@dimen/_16pxh">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearPostDescription"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:background="@drawable/rectangle_bg_name_deep_purple_a200_radius_14"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/inter"
+                        android:gravity="center"
+                        android:id="@+id/btnFortySix"
+                        android:layout_height="@dimen/_28pxv"
+                        android:layout_width="@dimen/_71pxh"
+                        android:paddingBottom="@dimen/_5pxv"
+                        android:paddingEnd="@dimen/_20pxh"
+                        android:paddingStart="@dimen/_20pxh"
+                        android:paddingTop="@dimen/_5pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_4_6"
+                        android:textAllCaps="false"
+                        android:textColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                        android:textFontWeight="500"
+                        android:textSize="@dimen/_14pxh"
+                        android:textStyle="bold" tools:text="@string/lbl_4_6"/>
+                    <TextView android:id="@+id/txtHalifordLuxury"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@{pageViewVM.pageViewModel.txtHalifordLuxury}"
+                        style="@style/txtInterbold40" tools:text="@string/msg_haliford_luxury_hotel"/>
+                    <TextView android:id="@+id/txtDescription"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@{pageViewVM.pageViewModel.txtDescription}"
+                        style="@style/txtInterregular12" tools:text="@string/msg_halford_hotel_is"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerPageView"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_13pxh}" tools:itemCount="6" tools:listitem="@layout/row_pageview"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_gray_600_radius_25"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inter"
+                    android:hint="@string/lbl_write_a_comment"
+                    android:id="@+id/etComment" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingHorizontal="@dimen/_16pxh"
+                    android:paddingVertical="@dimen/_16pxv"
+                    android:singleLine="true"
+                    android:text="@={pageViewVM.pageViewModel.etCommentValue}"
+                    android:textColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold" tools:ignore="Autofill"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:backgroundTint="@color/{&quot;name&quot;:&quot;deep_purple_A200&quot;}"
+            android:id="@+id/floatingBtnFloatingActionButton"
+            android:layout_gravity="bottom|end"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:fabCustomSize="@dimen/_50pxh"
+            app:srcCompat="@drawable/img_group_9143" app:tint="@color/{&quot;name&quot;:&quot;primary&quot;}"/>
+    </FrameLayout>
+</layout>

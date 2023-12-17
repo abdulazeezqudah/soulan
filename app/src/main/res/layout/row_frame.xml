@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="frameRowModel" type="com.soulanjo.app.modules.stories.data.model.FrameRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearEventsItem"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <FrameLayout android:id="@+id/frameLIVE"
+            android:layout_height="@dimen/_144pxv" android:layout_width="@dimen/_147pxh">
+            <ImageView android:id="@+id/imageLIVEWeTheFest"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_144pxh"
+                android:layout_width="@dimen/_147pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_10pxh}"
+                imageRes="@{@drawable/img_19_144x147}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_19_144x147"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_deep_purple_a200_radius_10"
+                android:drawablePadding="@dimen/_4pxh"
+                android:drawableStart="@drawable/img_group_9027"
+                android:ellipsize="end" android:fontFamily="@font/inter"
+                android:gravity="center" android:id="@+id/btnLIVE"
+                android:layout_gravity="top|start"
+                android:layout_height="@dimen/_20pxv"
+                android:layout_width="@dimen/_54pxh"
+                android:paddingBottom="@dimen/_3pxv"
+                android:paddingEnd="@dimen/_8pxh"
+                android:paddingStart="@dimen/_8pxh"
+                android:paddingTop="@dimen/_3pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_live"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_10pxh"
+                android:textStyle="bold" tools:text="@string/lbl_live"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtLIVEWeTheFest"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{frameRowModel.txtLIVEWeTheFest}"
+            style="@style/txtIntersemibold14" tools:text="@string/msg_live_we_the_fest"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{frameRowModel.txtPrice}"
+            style="@style/txtIntermedium12_1" tools:text="@string/msg_19_00_forg_stadium"/>
+    </LinearLayout>
+</layout>

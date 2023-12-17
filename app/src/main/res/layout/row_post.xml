@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="postRowModel" type="com.soulanjo.app.modules.trendingposts.data.model.PostRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearPostItem"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_16pxh"
+        android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;deep_purple_A200&quot;}cornerRadius">
+        <LinearLayout android:id="@+id/linearFrame1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageCircleImage"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_35pxh"
+                android:layout_width="@dimen/_35pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_ellipse_21_35x35}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_21_35x35"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearFrame2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtRizalReynaldhi"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{postRowModel.txtRizalReynaldhi}"
+                    style="@style/txtIntermedium12_2" tools:text="@string/lbl_rizal_reynaldhi"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDuration"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{postRowModel.txtDuration}"
+                    style="@style/txtIntermedium10" tools:text="@string/lbl_35_minutes_ago"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@+id/txtDescription"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@{postRowModel.txtDescription}"
+            style="@style/txtInterregular12" tools:text="@string/msg_vacation_to_bali"/>
+        <LinearLayout android:id="@+id/linearBali"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end" android:id="@+id/txtBali"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{postRowModel.txtBali}"
+                style="@style/txtInterregular14_1" tools:text="@string/lbl_bali"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:id="@+id/txtDreams"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{postRowModel.txtDreams}"
+                style="@style/txtInterregular14_1" tools:text="@string/lbl_dreams"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearVector"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageVector1"
+                android:layout_gravity="bottom"
+                android:layout_height="@dimen/_17pxh"
+                android:layout_width="@dimen/_19pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_vector"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_vector"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtZipcode"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{postRowModel.txtZipcode}"
+                style="@style/txtInterregular12" tools:text="@string/lbl_2200"/>
+            <ImageView android:id="@+id/imageVector2"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_width="@dimen/_19pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_vector_primary"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_vector_primary"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtEightHundred"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{postRowModel.txtEightHundred}"
+                style="@style/txtInterregular12" tools:text="@string/lbl_800"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

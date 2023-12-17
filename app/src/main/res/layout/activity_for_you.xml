@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="forYouVM" type="com.soulanjo.app.modules.foryou.data.viewmodel.ForYouVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearForYou"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylenameprimary_2">
+        <LinearLayout android:id="@+id/linearSixteen"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStyle">
+            <androidx.appcompat.widget.Toolbar
+                android:gravity="center_horizontal"
+                android:id="@+id/toolbarAppBar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <ImageView android:id="@+id/imageCircleImage"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse_9}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_9"/>
+                <LinearLayout android:id="@+id/linearGroup23"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLucasAnna"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{forYouVM.forYouModel.txtLucasAnna}"
+                        style="@style/txtIntersemibold20_2" tools:text="@string/lbl_lucas_anna"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtThreeThousandFiveHundredSixtee"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{forYouVM.forYouModel.txtThreeThousandFiveHundredSixtee}"
+                        style="@style/txtInterregular14_1" tools:text="@string/lbl_35_16"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageClose"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_close_primary"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_close_primary"/>
+            </androidx.appcompat.widget.Toolbar>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

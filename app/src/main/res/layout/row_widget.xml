@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="widgetRowModel" type="com.soulanjo.app.modules.accountdetails.data.model.WidgetRowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameWidget"
+        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_64pxh"
+        android:paddingBottom="@dimen/_3pxv"
+        android:paddingEnd="@dimen/_4pxh"
+        android:paddingStart="@dimen/_4pxh"
+        android:paddingTop="@dimen/_3pxv" style="@style/groupStylecornerRadius">
+        <ImageView android:id="@+id/imageImage"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_54pxh"
+            android:layout_width="@dimen/_52pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_27pxh}"
+            imageRes="@{@drawable/img_ellipse_15}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_15"/>
+    </FrameLayout>
+</layout>

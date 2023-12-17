@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="followRowModel" type="com.soulanjo.app.modules.friends.data.model.FollowRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearFollow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_5pxv"
+        android:paddingEnd="@dimen/_10pxh"
+        android:paddingStart="@dimen/_10pxh" android:paddingTop="@dimen/_5pxv">
+        <ImageView android:id="@+id/imageKevinAllsrub"
+            android:layout_height="@dimen/_50pxh"
+            android:layout_width="@dimen/_50pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_ellipse_5}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_5"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearKevinAllsrub"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtKevinAllsrub"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{followRowModel.txtKevinAllsrub}"
+                style="@style/txtIntersemibold20_1" tools:text="@string/lbl_kevin_allsrub"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtYourEFriendsOn"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{followRowModel.txtYourEFriendsOn}"
+                style="@style/txtInterregular14_5" tools:text="@string/msg_your_e_friends_on"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_border_name_deep_purple_a200_radius_16"
+            android:ellipsize="end" android:fontFamily="@font/inter"
+            android:gravity="center" android:id="@+id/btnFollow"
+            android:layout_height="@dimen/_33pxv"
+            android:layout_width="@dimen/_76pxh"
+            android:paddingBottom="@dimen/_8pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh"
+            android:paddingTop="@dimen/_8pxv" android:singleLine="true"
+            android:text="@string/lbl_follow"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;deep_purple_A200&quot;}"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:text="@string/lbl_follow"/>
+    </LinearLayout>
+</layout>

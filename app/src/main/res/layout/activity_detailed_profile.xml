@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="detailedProfileVM" type="com.soulanjo.app.modules.detailedprofile.data.viewmodel.DetailedProfileVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearDetailedProfile"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowBack"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_back_deep_purple_a200"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_back_deep_purple_a200"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtDone"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{detailedProfileVM.detailedProfileModel.txtDone}"
+                style="@style/txtIntersemibold16" tools:text="@string/lbl_done"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearProfile"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_21pxv" android:paddingTop="@dimen/_21pxv">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtProfile"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{detailedProfileVM.detailedProfileModel.txtProfile}"
+                style="@style/txtInterbold32" tools:text="@string/lbl_profile"/>
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;secondaryContainer&quot;}"
+                android:id="@+id/lineLine"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_2pxv" android:layout_width="@dimen/_414pxh"/>
+            <FrameLayout android:id="@+id/frameEditProfile"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_126pxv" android:layout_width="@dimen/_124pxh">
+                <ImageView android:id="@+id/imageCircleImage"
+                    android:layout_gravity="top|start"
+                    android:layout_height="@dimen/_120pxh"
+                    android:layout_width="@dimen/_120pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse_14_120x120}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_14_120x120"/>
+                <FrameLayout android:id="@+id/frameEdit"
+                    android:layout_gravity="bottom|end"
+                    android:layout_height="@dimen/_40pxv" android:layout_width="@dimen/_40pxh">
+                    <ImageView android:id="@+id/imageImage"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_width="@dimen/_40pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_group_9077"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_group_9077"/>
+                    <ImageView android:id="@+id/imageEdit"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_edit"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_edit"/>
+                </FrameLayout>
+            </FrameLayout>
+            <LinearLayout android:id="@+id/linearUsername"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtUsername"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{detailedProfileVM.detailedProfileModel.txtUsername}"
+                    style="@style/txtInterregular18_2" tools:text="@string/lbl_username"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtRosalia"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{detailedProfileVM.detailedProfileModel.txtRosalia}"
+                    style="@style/txtInterregular18_3" tools:text="@string/lbl_rosalia"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearEmail"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEmail"
+                    android:layout_gravity="top"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{detailedProfileVM.detailedProfileModel.txtEmail}"
+                    style="@style/txtInterregular18_2" tools:text="@string/lbl_email"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEmail1"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{detailedProfileVM.detailedProfileModel.txtEmail1}"
+                    style="@style/txtInterregular18_3" tools:text="@string/lbl_xyz_gmail_com"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearPhone"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPhone"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{detailedProfileVM.detailedProfileModel.txtPhone}"
+                    style="@style/txtInterregular18_2" tools:text="@string/lbl_phone"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtWidget"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{detailedProfileVM.detailedProfileModel.txtWidget}"
+                    style="@style/txtInterregular18_3" tools:text="@string/msg_12_3456_789_000"/>
+            </LinearLayout>
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;secondaryContainer&quot;}"
+                android:id="@+id/lineLine1"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_2pxv" android:layout_width="@dimen/_414pxh"/>
+            <LinearLayout android:id="@+id/linearGender"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtGender"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{detailedProfileVM.detailedProfileModel.txtGender}"
+                    style="@style/txtInterregular18_2" tools:text="@string/lbl_gender"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFemale"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{detailedProfileVM.detailedProfileModel.txtFemale}"
+                    style="@style/txtInterregular18_3" tools:text="@string/lbl_female"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearDateOfBirth"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDateOfBirth"
+                    android:layout_gravity="top"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{detailedProfileVM.detailedProfileModel.txtDateOfBirth}"
+                    style="@style/txtInterregular18_2" tools:text="@string/lbl_date_of_birth2"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDate"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{detailedProfileVM.detailedProfileModel.txtDate}"
+                    style="@style/txtInterregular18_3" tools:text="@string/lbl_21_08_1992"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

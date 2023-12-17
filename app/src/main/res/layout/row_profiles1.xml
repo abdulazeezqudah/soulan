@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="profiles1RowModel" type="com.soulanjo.app.modules.dailynew.data.model.Profiles1RowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameNineteen"
+        android:layout_height="wrap_content" android:layout_width="@dimen/_147pxh">
+        <ImageView android:id="@+id/imageNineteen"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_179pxh"
+            android:layout_width="@dimen/_147pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_15pxh}"
+            imageRes="@{@drawable/img_19}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_19"/>
+        <LinearLayout android:id="@+id/linearAgnessMonica"
+            android:layout_gravity="bottom|center"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_12pxv"
+            android:paddingTop="@dimen/_12pxv" style="@style/groupStylecornerRadius_1">
+            <ImageView android:id="@+id/imageAgnessMonica"
+                android:layout_height="@dimen/_34pxh"
+                android:layout_width="@dimen/_34pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_profile"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_profile"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAgnessMonica"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{profiles1RowModel.txtAgnessMonica}"
+                style="@style/txtIntermedium10_1" tools:text="@string/lbl_agness_monica"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

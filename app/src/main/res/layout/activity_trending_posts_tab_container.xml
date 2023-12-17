@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="trendingPostsTabContainerVM" type="com.soulanjo.app.modules.trendingpoststabcontainer.data.viewmodel.TrendingPostsTabContainerVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSearch"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_bg_name_gray_50_radius_20"
+                android:id="@+id/searchViewSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewsearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/lbl_search" app:searchIcon="@drawable/img_search"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_deep_purple_a200_radius_20"
+                android:id="@+id/btnIconButton"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_group_9086" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearTrendingPosts"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <com.google.android.material.tabs.TabLayout
+                android:gravity="center_horizontal"
+                android:id="@+id/tabLayoutTabview"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/{&quot;name&quot;:&quot;deep_purple_A200&quot;}" app:tabTextColor="@color/{&quot;name&quot;:&quot;indigo_100&quot;}"/>
+            <androidx.viewpager2.widget.ViewPager2
+                android:gravity="center_horizontal"
+                android:id="@+id/viewPagerTabBarView"
+                android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_width="match_parent"/>
+        </LinearLayout>
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameBottomBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;}cornerRadius">
+            <LinearLayout android:id="@+id/linearHome"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageHome"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_30pxh"
+                    android:layout_width="@dimen/_30pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_home"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_home"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtHome"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{trendingPostsTabContainerVM.trendingPostsTabContainerModel.txtHome}"
+                    style="@style/txtIntermedium10_2" tools:text="@string/lbl_home"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearStreams"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageStreams"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_30pxh"
+                    android:layout_width="@dimen/_30pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_streams"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_streams"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtStreams"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{trendingPostsTabContainerVM.trendingPostsTabContainerModel.txtStreams}"
+                    style="@style/txtIntermedium10_2" tools:text="@string/lbl_streams"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearMessages"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageMessages"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_30pxh"
+                    android:layout_width="@dimen/_30pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_messages"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_messages"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtMessages"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{trendingPostsTabContainerVM.trendingPostsTabContainerModel.txtMessages}"
+                    style="@style/txtIntermedium10_2" tools:text="@string/lbl_messages"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearNotifications"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageNotifications"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_30pxh"
+                    android:layout_width="@dimen/_30pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_notifications"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_notifications"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtNotifications"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{trendingPostsTabContainerVM.trendingPostsTabContainerModel.txtNotifications}"
+                    style="@style/txtIntermedium10_2" tools:text="@string/lbl_notifications"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearProfile"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageProfile"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_30pxh"
+                    android:layout_width="@dimen/_30pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_profile"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_profile"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtProfile"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{trendingPostsTabContainerVM.trendingPostsTabContainerModel.txtProfile}"
+                    style="@style/txtIntermedium10_2" tools:text="@string/lbl_profile"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

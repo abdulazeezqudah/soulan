@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="notificationsRowModel" type="com.soulanjo.app.modules.notifications.data.model.NotificationsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearKevinHasFollowed1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageImage"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_54pxh"
+            android:layout_width="@dimen/_52pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_27pxh}"
+            imageRes="@{@drawable/img_ellipse_22}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_22"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearKevinHasFollowed2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtKevinHasFollowed"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{notificationsRowModel.txtKevinHasFollowed}"
+                style="@style/txtInterbold16" tools:text="@string/msg_kevin_has_followed"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDuration"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{notificationsRowModel.txtDuration}"
+                style="@style/txtInterregular16_1" tools:text="@string/lbl_1_hour_ago"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
